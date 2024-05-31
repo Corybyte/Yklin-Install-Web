@@ -1,0 +1,213 @@
+/* 设置背景图片和全局样式 */
+body {
+    background-image: url('../img/WizardRegister_background.png'); /* 设置背景图片的URL，假设图片位于img文件夹下 */
+    background-size: cover; /* 背景图片铺满整个屏幕 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: #000000;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 宽度 100% */
+    height: 60px; /* 高度 60px，可以根据需要调整 */
+}
+
+.header .back-btn {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    /* background-color: #333; */
+    color: #fff;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+h2 {
+    font-size: 24px; /* 设置字体大小 */
+    color: #333; /* 设置字体颜色 */
+    margin-top: 0; /* 设置上边距为0，去除默认的上边距 */
+    margin-bottom: 20px; /* 设置下边距为20px */
+}
+
+#licenseText {
+    background-color: transparent;
+    border: 2px solid black; 
+    color: white;
+    resize: none;
+}
+
+#readchoose{
+    color:white;
+}
+
+/* 设置标题样式 */
+.page.active .language-table {
+    width: 100%; /* 表格宽度100% */
+    text-align: center; /* 居中对齐 */
+}
+
+.page.active h2 {
+    font-size: 48px; /* 设置字体大小 */
+    color: #fffefe; /* 设置字体颜色 */
+    margin-top: 5%; /* 设置上边距为0，去除默认的上边距 */
+    margin-bottom: 20px; /* 设置下边距为20px */
+}
+
+
+.page.active button {
+    padding: 10px 20px; /* 设置按钮的内边距 */
+    font-size: 18px; /* 设置按钮的字体大小 */
+    background-color: #007bff; /* 设置按钮的背景颜色 */
+    color: #fff; /* 设置按钮的文本颜色 */
+    border: none; /* 去除按钮的边框 */
+    cursor: pointer; /* 设置按钮的光标样式为手型 */
+    margin-top: 3%;
+}
+
+.page.active button:hover {
+    background-color: #0056b3; /* 鼠标悬停时按钮背景颜色变化 */
+}
+
+
+.page#page2 .content-container {
+    text-align: center;
+}
+
+.page#page2 .checkbox-container {
+    margin-top: 10px; /* 调整勾选框与上方内容的间距 */
+}
+
+
+
+.page#page3 .timezoneOptions {
+    text-align: center;
+}
+
+.page#page3 #world{
+    height: 350px;
+    width: 700px;
+    border: 2px solid black; /* 设置边框 */
+    margin: 2% auto;
+}
+
+.page#page3 #timezoneSelect{
+    background-color: transparent;
+    font-size: 18px;
+    border:2px solid black;
+    width: 20%;
+    height: 10%;
+    color: white;
+}
+
+.page#page3 .timezoneOptions button{
+    display: block; 
+    margin: 0 auto;
+}
+
+.page#page5{
+    text-align: center;
+}
+
+#newPartitionForm {
+    display: none; /* 初始设置为隐藏 */
+    position: fixed; /* 设置为固定定位 */
+    top: 0%; /* 从页面顶部开始 */
+    left: 0%; /* 从页面左侧开始 */
+    width: 100%; /* 宽度占满整个页面 */
+    height: 100%; /* 高度占满整个页面 */
+    z-index: 2;   /*确保在最顶层 */
+    border: 1px solid black; /* 设置边框 */
+    background-image: url('../img/WizardRegister_background.png'); /* 背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个区域 */
+    background-position: center; /* 背景图片居中 */
+}
+
+#editOptionsForm {
+    display: none; /* 初始设置为隐藏 */
+    position: fixed; /* 设置为固定定位 */
+    top: 0%; /* 从页面顶部开始 */
+    left: 0%; /* 从页面左侧开始 */
+    width: 100%; /* 宽度占满整个页面 */
+    height: 100%; /* 高度占满整个页面 */
+    z-index: 2;   /*确保在最顶层 */
+    border: 1px solid black; /* 设置边框 */
+    background-image: url('../img/WizardRegister_background.png'); /* 背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个区域 */
+    background-position: center; /* 背景图片居中 */
+}
+
+#newPartitionForm table{
+    margin: 0 auto; /* 设置左右外边距为自动，实现水平居中 */
+}
+
+/* 设置表格的边框样式 */
+.page#page5 #customInstallContent table {
+    margin-top: 10px;
+    margin: 0 auto;
+    border-collapse: collapse; /* 合并边框 */
+    width: 60%; /* 设置表格宽度为100% */
+}
+/* 设置表格单元格的边框样式 */
+.page#page5 #customInstallContent table td,
+.page#page5 #customInstallContent table th {
+    border: 1px solid black; /* 设置单元格边框为1px黑色实线 */
+    padding: 8px; /* 设置单元格内边距 */
+}
+/* 按钮单元格不设置边框 */
+.page#page5 #customInstallContent table td button {
+    border: none; /* 消除按钮边框 */
+    background-color: transparent; /* 设置按钮背景透明 */
+    cursor: pointer; /* 设置鼠标悬停样式 */
+    color: #333; /* 设置按钮文字颜色为黑色 */
+}
+/* 消除表头边框 */
+.page#page5 #customInstallContent table th {
+    border: none;
+}
+
+/* 居中显示 */
+#PartitionSize {
+    text-align: center;
+}
+
+/* 使输入框透明 */
+#PartitionSize {
+    background-color: transparent;
+    border: none;
+}
+
+.page#page5 #fullInstallContent{
+    margin-top: 10px;
+}
+
+.page#page5 #customInstallContent{
+    margin-top: 10px;
+}
+
+#editOptionsForm table{
+    color:white;
+    text-align: left;
+    margin: 0 auto;
+}

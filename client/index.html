@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麒麟操作系统引导安装</title>
+
+    <link rel="stylesheet" href="css/index_style.css" >
+    <link href="css/driver.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="img/logo.png" alt="操作系统" class="logo"> <!-- 设置logo图片的URL -->
+
+        <div class="options">
+            <div class="option"><button onclick="tryWithoutInstall()">试用银河麒麟操作系统而不安装(T)</button></div>
+            <div class="option"><button onclick="installOS()">安装银河麒麟操作系统(I)</button></div>
+            <div class="option"><button onclick="checkDisk()">检测盘片是否有错误(C)</button></div>
+            <div class="option"><button onclick="testMemory()">检测内存(H)</button></div>
+            <div class="option"><button onclick="bootFromHDD()">从第一硬盘引导(B)</button></div>
+        </div>
+    </div>
+
+    <div class="bottom-menu">
+        <span onclick="helpFunction()">F1 帮助</span>
+        <span onclick="languageFunction()">F2 语言</span>
+        <span onclick="keyboardLayoutFunction()">F3 键盘布局</span>
+        <span onclick="modeFunction()">F4 模式</span>
+        <span onclick="accessibilityFunction()">F5 辅助功能</span>
+        <span onclick="otherOptionsFunction()">F6 其他选项</span>
+    </div>
+
+    <script src="js/index_script.js"></script>
+    <script src="js/driver.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息注册页面</title>
+
+    <link rel="stylesheet" href="css/WinzardRegister_style.css" >
+    <script src="js/echarts.min.js"></script>
+    <script src="js/world.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/> -->
+    <script src="js/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="css/driver.css"/>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="back-btn" id="backBtn">&#8592; 上一步</div>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="main-content">
+        <!-- 页面 1 内容 -->
+        <div class="page active" id="page1">
+            <table class="language-table" align="center" cellpadding="10" cellspacing="0" border="0">
+                <th><h2>选择语言</h2></th>
+                <tr>
+                    <td>
+                        <label style="color: white;"><input type="radio" name="language" value="chinese" checked> 中文简体</label>                 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label style="color: white;"><input type="radio" name="language" value="english"> English</label>                     
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="nextButton1">下一步</button>
+                    </td>  
+                </tr>
+            </table>
+        </div>
+
+        <!-- 页面 2 内容 -->
+        <div class="page" id="page2">
+            <div class="content-container">
+                <h2>阅读许可协议</h2>
+                <!-- 使用textarea装入协议内容 -->
+                <textarea id="licenseText" rows="25" cols="130" readonly>银河麒麟最终用户使用许可协议和隐私政策声明
+                    尊敬的银河麒麟操作系统及相关产品用户:
+                    请您仔细阅读本协议条款、补充许可条款（统称“协议”）及银河麒麟操作系统隐私政策声明（以下简称“声明”）。当您确认了解并点击下一步时，即表明您已接受本协议的条款，本协议将立即生效，对您和本公司双方具有法律约束力。
+                    本协议及声明中的“本产品”是指由麒麟软件有限公司开发并制作发行的用于办公或构建企业及政府的信息化基础设施——“银河麒麟操作系统软件产品”。“我们”是指麒麟软件有限公司。“您”是指支付授权费用并使用银河麒麟操作系统及相关产品的用户。
+                    银河麒麟最终用户使用许可协议
+                    版本发布日期：【2021】年【7】月【30】日
+                    版本生效日期：【2021】年【7】月【30】日
+                    本协议将向您说明以下内容：
+                    一、使用许可
+                    二、Java技术限制
+                    三、Cookie和其他技术
+                    四、知识产权条款
+                    五、开放源代码说明
+                    六、第三方软件/服务说明
+                    七、免责条款
+                    八、协议完整性及可分割性说明
+                    九、适用法律及争议解决
+                    一、使用许可
+                    按照已经为本产品支付费用的用户数目及计算机硬件类型，我们向您授予非排他、不可转让的许可，仅允许被授权人单位及与其签订劳动合同的员工使用由麒麟软件提供的随附软件和文档以及任何错误纠正。
+                    1.教育机构使用许可
+                    在遵守本协议的条款和条件的情况下，如果您是教育机构，允许贵机构仅在内部使用随附的未经修改的二进制格式的软件。此处的“在内部使用”是指被授权人单位及与其签订劳动合同的员工以及在贵机构入学的学生使用本产品。
+                    2.字型软件使用
+                    字型软件指本产品中预装的和生成字体样式的软件。您不可从软件中分离字型软件，不可改动字型软件，以新增此等字型软件被作为本产品的一部分交付予您时所不具备的任何功能，不可将字型软件嵌入作为商业产品提供以换取收费或其他报酬的文件、不可脱离安装了本产品的机器使用。如将字型软件用于对外宣传等其他商业用途时，请您与字体版权厂商联系协商以获得对您相关行为的许可。
+                    二、Java技术限制
+                    您不可更改“Java平台界面”（简称“JPI”，即指明为“java”包或“java”包的任何子包中的类），无论通过在JPI中创建额外的类，还是通过其他方式导致对JPI中的类进行增添或更动，均为不可。如果您创建一个额外的类以及一个或多个相关的API，而它们（i）扩展Java平台的功能；并且（ii）可供第三方软件开发者用于开发可调用上述额外API的额外软件，则您必须迅即广泛公布对此种API的准确说明，以供所有开发者免费使用。您不可创建、或授权其他被许可人创建以任何方式标示为“java”、“javax”、“sun”的额外的类、界面、子包或Sun在任何命名约定中指明的类似约定。参见Java运行时环境二进制代码许可的适当版本（目前位于http://jdk.java.net），以了解可与Java小程序和应用程序共同分发的运行时代码的可供情况。
+                    三、Cookie和其他技术
+                    为帮助我们更好地了解并服务用户，我们的网站、在线服务和应用程序可能会使用“Cookie”技术。这些Cookie用于存储进出系统的网络流量以及因检测错误而生成的流量，因此必须设置。 我们通过使用这些Cookie来了解您与我们的网站和在线服务如何进行交互。
+                    如果您想禁用 Cookie 并且使用的是Firefox浏览器，可在Firefox的隐私与安全中心进行设置。如果您使用的是其他浏览器，请向相关供应商咨询具体方案。
+                    依照《中华人民共和国网络安全法》第七十六条第五款，个人信息，是指以电子或者其他方式记录的能够单独或者与其他信息结合识别自然人个人身份的各种信息，包括但不限于自然人的姓名、出生日期、身份证件号码、个人生物识别信息、住址、电话号码等。如果Cookie中包含上述信息，或者存在通过Cookie收集的非个人信息与其他个人信息合并后的信息，出于本隐私政策的目的，我们会将合并后的信息视为个人隐私信息，将参照银河麒麟隐私政策声明，为您的个人信息提供相应的安全保护措施。
+                    四、知识产权条款
+                    1.商标和标识
+                    本产品受到版权（著作权）法、商标法和其他法律及国际知识产权公约的保护。我们或其许可方保留对本产品的所有权及所有相关的知识产权。对于我们或其许可方的任何商标、服务标记、标识或商号的任何权利、所有权或利益，本协议均不作任何授权。您对麒麟软件标记的任何使用都应有利于麒麟软件，未经我们书面同意，不得擅自使用麒麟软件任何商标、标识。
+                    2.关于复制、修改及分发
+                    如果在所有复制品中维持本协议书不变，您可以且必须根据《GNU GPL-GNU通用公共许可证》复制、修改及分发银河麒麟操作系统软件产品中遵守《GNU GPL-GNU通用公共许可证》协议的软件，其他不遵守《GNU GPL-GNU通用公共许可证》协议的银河麒麟操作系统软件产品必须根据相关法律、其他许可协议进行复制、修改及分发，但任何以银河麒麟操作系统软件产品为基础的衍生发行版未经我们的书面授权不能使用任何我们的商标或其他任何标志。
+                    特别注意：该复制、修改及分发不包括本产品中包含的任何不适用《GNU GPL-GNU通用公共许可证》的软件，如银河麒麟操作系统软件产品中包含的软件商店、输入法软件、字库软件、第三方应用软件等。除非适用法律予以禁止，否则您不得对上述软件进行复制、修改（包括反编译或反向工程）、分发。
+                    五、开放源代码说明
+                    对于本产品中包含的任何开放源代码，本协议的任何条款均不得限制、约束或以其它方式影响任何适用开放源代码许可证赋予您的任何相应的权利或者义务或您应遵守的各种条件。
+                    六、第三方软件/服务说明
+                    本协议所指的第三方软件/服务是指由非银河麒麟操作系统生产商的其他组织或个人开发的相关软件/服务。本产品可能包含或捆绑有第三方软件/服务，这些第三方软件/服务附带单独的许可协议，您使用附带单独许可协议的任何第三方软件/服务需受到该单独许可协议的约束。
+                    我们不对本产品中的第三方软件/服务拥有任何控制权，也不对其提供方或用户行为的合法性、准确性、有效性、安全性进行任何明示或默示的保证或担保。
+                    七、免责条款
+                    1.有限担保
+                    我们向您担保，自购买或其他合法取得本产品之日起九十（90）天内（以销售合同日期为准），本产品的存储介质（如果有）在正常使用的情况下无材料和工艺方面的缺陷。在本有限担保项下，您可获得的所有补偿及我们的全部责任为由我们选择更换本产品介质或退还本产品的购买费用。
+                    2.免责声明
+                    除上述有限担保外，本软件按“原样”提供，不提供任何明示或默示的条件、陈述及担保，包括对适销性、对特定用途的适用性或非侵权性的任何默示的担保，均不予负责，但本免责声明被认定为法律上无效的情况除外。
+                    3.责任限制
+                    在法律允许范围内，无论在何种情况下，无论采用何种有关责任的理论，无论因何种方式导致，对于因使用或无法使用本软件引起的或与之相关的任何收益损失、利润或数据损失，或者对于特殊的、间接的、后果性的、偶发的或惩罚性的损害赔偿，我们或其许可方均不承担任何责任（即使我们已被告知可能出现上述损害赔偿）。根据本协议，在任何情况下，无论是在合同、侵权行为（包括过失）方面，还是在其他方面，我们对您的责任将不超过您就本软件所支付的金额。即使上述担保未能达到其基本目的，上述限制仍然适用。
+                    八、协议完整性及可分割性说明
+                    1.协议完整性
+                    本协议是我们就产品使用与您达成的完整协议。它取代此前或同期的所有和本协议不一致的口头或书面往来信息、建议、陈述和担保。在本协议期间，有关报价、订单、回执或各方之间就本协议内容进行的其他往来通信中的任何冲突条款或附加条款，均以本协议为准。对本协议的任何修改均无约束力，除非通过书面进行修改并由每一方的授权代表签字。
+                    2.可分割性
+                    如果本协议中有任何规定被认定为无法执行，则删除相应规定，本协议仍然有效，除非该删除会防碍各方根本目的的实现（在这种情况下，本协议将立即终止）。
+                    九、适用法律及争议解决
+                    1.管辖法律适用
+                    与本协议相关的任何争议解决（包括但不限于诉讼、仲裁等）均受适用中华人民共和国法律管辖。选择其它任何国家和地区的法律规则不予适用。
+                    2.终止
+                    如果本软件成为或在任一方看来可能成为任何知识产权侵权索赔之标的，则任一方可立即终止本协议。
+                    本协议在终止之前有效。您可以随时终止本协议，但必须同时销毁本软件的全部正本和副本。如果您未遵守本协议的任何规定，则本协议将不经我们发出通知立即终止。终止时，您必须销毁本软件的全部正本和副本，并且需承担因未遵守本协议而导致的法律责任。
+                    本协议提供中英文两种版本，以上任何内容如有歧义，以中文版本为准。
+                    银河麒麟操作系统隐私政策声明
+                    版本发布日期：【2021】年【7】月【30】日
+                    版本生效日期：【2021】年【7】月【30】日
+                    我们非常重视个人信息和隐私保护，为了保证合法、合理、适度的收集、存储、使用您的个人隐私信息，并在安全、可控的情况下进行传输、存储，我们制定了本声明。我们将会按照法律要求和业界成熟安全标准，为您的个人信息提供相应的安全保护措施。
+                    本声明将向您说明以下内容：
+                    一、关于收集和使用您的个人信息
+                    二、如何存储和保护您的个人信息
+                    三、如何管理您的个人信息
+                    四、关于第三方软件/服务的隐私说明
+                    五、关于未成年人使用产品
+                    六、本声明如何更新
+                    七、如何联系我们
+                    一、如何收集和使用您的个人信息
+                    1.收集个人信息的情况
+                    我们在您使用本产品过程中收集相关的信息，主要为了向您提供更高质量、更易用的产品和更好的服务。收集的部分信息由您直接提供，其他信息则由我们通过您与产品的交互以及对产品的使用和体验收集而来。除非我们已根据适用的法律规定取得您的明示同意，我们不会主动收集并处理您的个人信息。
+                    1）本产品授权许可机制，会根据您所使用计算机的网卡、固件和主板等信息通过加密机制和转换方法生成申请产品正式授权许可的机器码；您将该机器码发送给麒麟软件商务人员后，可根据合同及相关协议申请正式许可。该机器码不直接包含您所使用计算机的网卡、固件和主板等设备的具体信息。
+                    2）本产品软件商店的服务器端，会根据您所使用计算机的CPU类型信息以及IP地址进行连接，同时我们会收集您使用本产品软件商店的相关信息，包括但不限于打开软件商店的时间、各页面之间的交互、搜索内容、下载的内容等，收集的相关信息一般记录在软件商店的服务端系统的日志中，具体存储位置可能因为不同的服务场景有所变动。
+                    3）本产品的升级更新，会根据您所使用计算机的IP地址进行连接，以便实现您升级更新系统；
+                    4）因业务往来及技术服务等向您收集电子邮箱、电话、姓名等个人信息。
+                    5）本产品的生物特征管理工具支持系统组件使用生物特征进行认证，包括指纹、指静脉、虹膜、声纹等。您录入的生物特征信息将储存在本地计算机，这部分信息我们仅接收验证结果，不会收集和上传。如您不需要使用生物特征进行系统认证，可以在生物特征管理工具中关闭该功能。
+                    6）本产品提供录音功能，您在使用本产品录音软件中，我们仅会将您使用录音时的音频内容存储在本地计算机中，不会进行收集和上传。
+                    7）本产品的服务与支持功能会收集由您提供给我们的日志、电子邮箱、电话、姓名等信息，便于提供技术服务，我们将妥善保管您的个人信息。
+                    8）本产品升级过程中，如需新增收集您的个人信息，我们将及时更新本部分内容。
+                    2.使用个人信息的情况
+                    我们严格遵守法律法规的规定及与您的约定，将收集的信息用于以下用途。若我们超出以下用途，我们将再次向您进行说明，并征得您的同意。
+                    1）涉及产品许可机制、软件商店使用、系统更新维护、生物识别、在线服务等需要；
+                    2）我们会利用相关信息协助提升产品的安全性、可靠性和可持续服务；
+                    3）我们会利用收集的信息（例如您提供的电子邮件地址、电话等）直接与您沟通。例如，业务联系、技术支持或服务回访；
+                    4）我们会利用收集的数据改进产品当前的易用性、提升产品用户体验（例如软件商店的个性化推荐）以及修复产品缺陷等；
+                    5）我们会将所收集到的用户行为数据用于大数据分析。例如，我们将收集到的信息用于分析形成不包含任何个人信息的城市热力图或行业洞察报告。我们可能对外公开并与我们的合作伙伴分享经统计加工后不含身份识别内容的信息，用于了解用户如何使用我们服务或让公众了解我们服务的总体使用趋势;
+                    6）我们可能使用您的相关信息，在相关网站、应用及其他渠道向您提供与您更加相关的广告;
+                    7）为了遵从相关法律法规、部门规章、政府指令的相关要求。
+                    3.信息的分享及对外提供
+                    我们不会共享或转让您的个人信息至第三方，但以下情况除外：
+                    1）获取您的明确同意后，我们会与第三方分享您的个人信息；
+                    2）为实现外部处理的目的，我们可能与关联公司或其他第三方合作伙伴（第三方服务供应商、承包商、代理、应用开发者等）分享您的个人信息。我们将采用加密、匿名化处理等手段来保障您的信息安全；
+                    3）我们不会对外公开披露所收集的个人信息，如必须公开披露时，我们会向您告知此次公开披露的目的、披露信息的类型及可能涉及的敏感信息，并征得您的同意；
+                    4）随着我们业务的持续发展，我们有可能进行合并、收购、资产转让等交易，我们将告知相关情形，按照法律法规及不低于本声明所要求的标准继续保护或要求新的控制者继续保护您的个人信息；
+                    5）如我们使用您的个人信息，超出了与收集时所声称的目的及具有直接或合理关联的范围，我们将在使用您的个人信息前，再次向您告知并征得您的同意。
+                    4.征得授权同意的例外情况
+                    1）与国家安全、国防安全等国家利益直接相关的；
+                    2）与公共安全、公共卫生、公众知情等重大公共利益直接相关的；
+                    3）与犯罪侦查、起诉、审判和判决执行等直接相关的；
+                    4）出于维护您或其他个人的生命、财产等重大合法权益但又无法得到您本人同意的；
+                    5）所收集的个人信息是您自行向社会公众公开的；
+                    6）从合法公开披露的信息中收集的个人信息，如合法的新闻报道、政府信息公开等渠道；
+                    7）根据您要求签订和履行合同所必需的；
+                    8）用于维护所提供的产品或服务的安全稳定运行所必需的。如发现、处置产品或服务的故障；
+                    9）出于公共利益开展统计或学术研究所必需，且其对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的；
+                    10）法律法规规定的其他情形。
+                    二、我们如何存储和保护您的个人信息
+                    1.信息存储的地点
+                    我们会按照法律法规规定，将在中国境内收集和产生的个人信息存储于中国境内。
+                    2.信息存储的期限
+                    一般而言，我们仅为实现目的所必需的时间或法律法规规定最短期限保留您的个人信息。记录在日志中的信息会按配置在一定期限保存及自动删除。
+                    当我们的产品或服务发生停止运营的情形时，我们将以通知、公告等形式通知您，在合理的期限内删除您的个人信息或进行匿名化处理，并立即停止收集个人信息的活动。
+                    3.我们如何保护这些信息
+                    我们努力为用户的信息安全提供保障，以防止信息的丢失、不当使用、未经授权访问或披露。
+                    我们将在合理的安全水平内使用安全保护措施以保障信息的安全。例如，我们会使用加密技术等手段来保护您的系统级账户密码。
+                    我们建立专门的管理制度、流程和组织以保障信息的安全。例如，我们严格限制访问信息的人员范围，要求他们遵守保密义务。
+                    4.应急预案
+                    若发生个人信息泄露等安全事件，我们会依法启动应急预案，阻止安全事件扩大，并以推送通知、公告等形式告知您安全事件的情况、事件可能对您的影响以及我们将采取的补救措施。我们还将按照法律法规和监管部门要求，上报个人信息安全事件的处置情况。
+                    三、如何管理您的个人信息
+                    如果担心因使用本产品导致个人信息的泄露，您可根据个人及业务需要考虑暂停或不使用涉及个人信息的相关功能，如产品正式授权许可、应用商店、系统更新升级、生物识别等。
+                    在使用本产品之上的第三方软件/服务时，请注意个人隐私保护。
+                    四、关于第三方软件/服务的隐私说明
+                    本协议所指的第三方软件/服务是由非银河麒麟操作系统生产商的其他组织或个人开发的相关软件/服务。
+                    您在本产品之上安装或使用第三方软件/服务时，第三方软件/服务的隐私保护和法律责任由第三方软件/服务自行负责，请您仔细阅读和审查第三方软件/服务对应的隐私声明或条款，注意个人隐私保护。
+                    五、关于未成年人使用产品
+                    如果您是未成年人，则需要您的监护人同意您使用本产品并同意相关服务条款。除了提供产品所需要的信息外，我们不会刻意要求未成年人提供其他更多数据。在征得监护人同意或授权后，未成年人所创建的帐户即被视为等同于其他任何帐户。我们制定了专门的信息处理规则以保护使用本产品的未成年人的个人信息安全。监护人也应采取适当的预防措施保护未成年人，监督其对本产品的使用。
+                    六、本声明如何更新
+                    我们可能会随时更新本声明，并且会在变更时通过产品安装过程或公司网站向您展示变更后的声明。在这些变更生效后使用服务或根据这些条款授予许可的任何软件，即表示您同意新的条款。如果您不同意新的条款，则必须停止使用本产品，请关闭您在本产品之上创建的帐户；如果您是监护人，请帮助您的未成年子女关闭他或她在本产品之上创建的帐户。
+                    七、如何联系我们
+                    如您对本声明存在任何疑问，或任何相关的投诉、意见，可通过我们的客服热线400-089-1870、官方网站（www.kylinos.cn）或本产品中“服务与支持”应用进行咨询或反映。您也可以通过发送邮件至market@kylinos.cn与我们联系。
+                    我们会及时、妥善处理您的问题。一般情况下，我们将在15个工作日内给予答复。
+                    本声明自更新之日起生效，同时提供中英文两种版本，以上任何条款如有歧义，以中文版本为准。
+                    最近更新日期：2021年11月1日
+                    麒麟软件有限公司
+                    地址：天津市滨海高新区塘沽海洋科技园信安创业广场3号楼（300450）
+                    北京市海淀区北四环西路9号银谷大厦（100190）
+                    长沙市开福区芙蓉中路1段303号富兴世界金融中心T3栋（410000）
+                    上海市徐汇区番禺路1028号数娱大厦（200030）
+                    电话：天津（022）58955650 北京（010）51659955 
+                    长沙（0731）88280170 上海（021）51098866
+                    传真：天津（022）58955651 北京（010）62800607 
+                    长沙（0731）88280166 上海（021）51062866
+                    公司网站：www.kylinos.cn
+                    电子邮件：support@kylinos.cn
+                    </textarea>
+
+                <!-- 勾选框 -->
+                <div class="checkbox-container">
+                    <label id="readchoose"><input type="checkbox" id="agreeCheckbox"> 我已经阅读并同意协议条款</label>
+                </div>
+
+                <!-- 下一步按钮 -->
+                <div class="button-container">
+                    <button id="nextButton2">下一步</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页面 3 内容 -->
+        <div class="page" id="page3">
+            <div class="timezoneOptions">
+                <h2>选择时区</h2>
+                <select id="timezoneSelect" size="1">
+                    <option value="UTC+08:00">(UTC+08:00) 北京</option>
+                    <option value="UTC+08:00">(UTC+08:00) 上海</option>
+                    <option value="UTC+08:00">(UTC+08:00) 乌鲁木齐</option>
+                    <option value="UTC+08:00">(UTC+08:00) 澳门</option>
+                    <option value="UTC+08:00">(UTC+08:00) 香港</option>
+                    <option value="UTC+08:00">(UTC+08:00) 台北</option>
+                    <option value="UTC+01:00">(UTC+01:00) 安道尔</option>
+                    <option value="UTC+04:00">(UTC+04:00) 迪拜</option>
+                    <option value="UTC+04:30">(UTC+04:30) 喀布尔</option>
+                    <option value="UTC+01:00">(UTC+01:00) 地拉那</option>
+                    <option value="UTC+04:00">(UTC+04:00) 埃里温</option>
+                    <option value="UTC+03:00">(UTC+03:00) 布宜诺斯艾利斯</option>
+                    <option value="UTC+03:00">(UTC+03:00) 科尔多瓦</option>
+                    <option value="UTC+03:00">(UTC+03:00) 萨尔塔</option>
+                    <option value="UTC+03:00">(UTC+03:00) 胡胡伊</option>
+                    <option value="UTC+03:00">(UTC+03:00) 图库曼</option>
+                    <option value="UTC+03:00">(UTC+03:00) 卡塔马卡</option>
+                    <option value="UTC+03:00">(UTC+03:00) 拉里奥哈</option>
+                    <option value="UTC+03:00">(UTC+03:00) 圣胡安</option>
+                    <option value="UTC+03:00">(UTC+03:00) 门多萨</option>
+                    <option value="UTC+03:00">(UTC+03:00) 圣路易斯</option>
+                    <option value="UTC+03:00">(UTC+03:00) 里奥加耶戈斯</option>
+                    <option value="UTC+03:00">(UTC+03:00) 乌斯怀亚</option>
+                    <option value="UTC+11:00">(UTC+11:00) 美属萨摩亚</option>
+                    <option value="UTC+01:00">(UTC+01:00) 奥地利</option>
+                    <option value="UTC+10:30">(UTC+10:30) 豪勋爵</option>
+                    <option value="UTC+11:00">(UTC+11:00) 麦格理</option>
+                    <option value="UTC+10:00">(UTC+10:00) 霍巴特</option>
+                    <option value="UTC+10:00">(UTC+10:00) 库利</option>
+                    <option value="UTC+10:00">(UTC+10:00) 墨尔本</option>
+                    <option value="UTC+10:00">(UTC+10:00) 悉尼</option>
+                    <option value="UTC+09:30">(UTC+09:30) 布罗肯希尔</option>
+                    <option value="UTC+10:00">(UTC+10:00) 布里斯班</option>
+                    <option value="UTC+10:00">(UTC+10:00) 林德曼</option>
+                    <option value="UTC+09:30">(UTC+09:30) 阿德莱德</option>
+                    <option value="UTC+09:30">(UTC+09:30) 达尔文</option>
+                    <option value="UTC+08:00">(UTC+08:00) 珀斯</option>
+                    <option value="UTC+08:45">(UTC+08:45) 尤克拉</option>
+                    <option value="UTC+04:00">(UTC+04:00) 巴库</option>
+                    <option value="UTC+04:00">(UTC+04:00) 巴巴多斯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 达卡</option>
+                    <option value="UTC+01:00">(UTC+01:00) 布鲁塞尔</option>
+                    <option value="UTC+02:00">(UTC+02:00) 索菲亚</option>
+                    <option value="UTC+04:00">(UTC+04:00) 百慕大</option>
+                    <option value="UTC+08:00">(UTC+08:00) 文莱</option>
+                    <option value="UTC+04:00">(UTC+04:00) 拉巴斯</option>
+                    <option value="UTC+02:00">(UTC+02:00) 迪诺罗尼亚</option>
+                    <option value="UTC+03:00">(UTC+03:00) 贝伦</option>
+                    <option value="UTC+03:00">(UTC+03:00) 福塔雷萨</option>
+                    <option value="UTC+03:00">(UTC+03:00) 累西腓</option>
+                    <option value="UTC+03:00">(UTC+03:00) 阿拉瓜伊纳</option>
+                    <option value="UTC+03:00">(UTC+03:00) 马塞约</option>
+                    <option value="UTC+03:00">(UTC+03:00) 巴伊亚</option>
+                    <option value="UTC+03:00">(UTC+03:00) 圣保罗</option>
+                    <option value="UTC+03:00">(UTC+03:00) 圣塔伦</option>
+                    <option value="UTC+04:00">(UTC+04:00) 大坎普</option>
+                    <option value="UTC+04:00">(UTC+04:00) 库亚巴</option>
+                    <option value="UTC+04:00">(UTC+04:00) 波多韦柳</option>
+                    <option value="UTC+04:00">(UTC+04:00) 博阿维斯塔</option>
+                    <option value="UTC+04:00">(UTC+04:00) 马瑙斯</option>
+                    <option value="UTC+05:00">(UTC+05:00) 依伦尼贝</option>
+                    <option value="UTC+05:00">(UTC+05:00) 里奥布朗库</option>
+                    <option value="UTC+05:00">(UTC+05:00) 拿骚</option>
+                    <option value="UTC+06:00">(UTC+06:00) 廷布</option>
+                    <option value="UTC+03:00">(UTC+03:00) 明斯克</option>
+                    <option value="UTC+06:00">(UTC+06:00) 伯利兹</option>
+                    <option value="UTC+03:30">(UTC+03:30) 圣约翰斯</option>
+                    <option value="UTC+04:00">(UTC+04:00) 哈利法克斯</option>
+                    <option value="UTC+04:00">(UTC+04:00) 格莱斯贝</option>
+                    <option value="UTC+04:00">(UTC+04:00) 蒙克顿</option>
+                    <option value="UTC+04:00">(UTC+04:00) 古斯湾</option>
+                    <option value="UTC+04:00">(UTC+04:00) 布兰克萨布隆</option>
+                    <option value="UTC+05:00">(UTC+05:00) 多伦多</option>
+                    <option value="UTC+05:00">(UTC+05:00) 尼皮贡</option>
+                    <option value="UTC+05:00">(UTC+05:00) 桑德贝</option>
+                    <option value="UTC+05:00">(UTC+05:00) 伊魁特</option>
+                    <option value="UTC+05:00">(UTC+05:00) 旁涅唐</option>
+                    <option value="UTC+05:00">(UTC+05:00) 阿蒂科肯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 温尼伯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 雷尼河</option>
+                    <option value="UTC+06:00">(UTC+06:00) 雷索卢特</option>
+                    <option value="UTC+06:00">(UTC+06:00) 兰今湾</option>
+                    <option value="UTC+06:00">(UTC+06:00) 里贾纳</option>
+                    <option value="UTC+06:00">(UTC+06:00) 斯威夫特卡伦特</option>
+                    <option value="UTC+07:00">(UTC+07:00) 埃德蒙顿</option>
+                    <option value="UTC+07:00">(UTC+07:00) 剑桥湾</option>
+                    <option value="UTC+07:00">(UTC+07:00) 耶洛奈夫</option>
+                    <option value="UTC+07:00">(UTC+07:00) 伊努维克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 克雷斯顿</option>
+                    <option value="UTC+07:00">(UTC+07:00) 道森克里克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 纳尔逊堡</option>
+                    <option value="UTC+08:00">(UTC+08:00) 温哥华</option>
+                    <option value="UTC+08:00">(UTC+08:00) 怀特霍斯</option>
+                    <option value="UTC+08:00">(UTC+08:00) 道森</option>
+                    <option value="UTC+06:30">(UTC+06:30) 科科斯</option>
+                    <option value="UTC+01:00">(UTC+01:00) 苏黎世</option>
+                    <option value="UTC+00:00">(UTC+00:00) 阿比让</option>
+                    <option value="UTC+10:00">(UTC+10:00) 拉罗汤加岛</option>
+                    <option value="UTC+04:00">(UTC+04:00) 圣地亚哥</option>
+                    <option value="UTC+03:00">(UTC+03:00) 蓬塔阿雷纳斯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 复活节岛</option>
+                    <option value="UTC+05:00">(UTC+05:00) 波哥大</option>
+                    <option value="UTC+06:00">(UTC+06:00) 哥斯达黎加</option>
+                    <option value="UTC+05:00">(UTC+05:00) 哈瓦那</option>
+                    <option value="UTC+01:00">(UTC+01:00) 佛得角群岛</option>
+                    <option value="UTC+04:00">(UTC+04:00) 库拉索</option>
+                    <option value="UTC+07:00">(UTC+07:00) 圣诞岛</option>
+                    <option value="UTC+02:00">(UTC+02:00) 尼科西亚</option>
+                    <option value="UTC+02:00">(UTC+02:00) 法马古斯塔</option>
+                    <option value="UTC+01:00">(UTC+01:00) 布拉格</option>
+                    <option value="UTC+01:00">(UTC+01:00) 柏林</option>
+                    <option value="UTC+01:00">(UTC+01:00) 哥本哈根</option>
+                    <option value="UTC+04:00">(UTC+04:00) 圣多明各</option>
+                    <option value="UTC+01:00">(UTC+01:00) 阿尔及尔</option>
+                    <option value="UTC+05:00">(UTC+05:00) 瓜亚基尔</option>
+                    <option value="UTC+06:00">(UTC+06:00) 加拉帕戈斯</option>
+                    <option value="UTC+02:00">(UTC+02:00) 塔林</option>
+                    <option value="UTC+02:00">(UTC+02:00) 开罗</option>
+                    <option value="UTC+00:00">(UTC+00:00) 埃尔阿尤恩</option>
+                    <option value="UTC+01:00">(UTC+01:00) 马德里</option>
+                    <option value="UTC+01:00">(UTC+01:00) 休达</option>
+                    <option value="UTC+00:00">(UTC+00:00) 加那利</option>
+                    <option value="UTC+02:00">(UTC+02:00) 赫尔辛基</option>
+                    <option value="UTC+12:00">(UTC+12:00) 斐济</option>
+                    <option value="UTC+03:00">(UTC+03:00) 斯坦利</option>
+                    <option value="UTC+10:00">(UTC+10:00) 特鲁克群岛</option>
+                    <option value="UTC+11:00">(UTC+11:00) 波纳佩岛</option>
+                    <option value="UTC+11:00">(UTC+11:00) 库赛埃</option>
+                    <option value="UTC+00:00">(UTC+00:00) 法罗群岛</option>
+                    <option value="UTC+01:00">(UTC+01:00) 巴黎</option>
+                    <option value="UTC+00:00">(UTC+00:00) 伦敦</option>
+                    <option value="UTC+04:00">(UTC+04:00) 第比利斯</option>
+                    <option value="UTC+03:00">(UTC+03:00) 卡宴</option>
+                    <option value="UTC+00:00">(UTC+00:00) 加纳</option>
+                    <option value="UTC+01:00">(UTC+01:00) 直布罗陀</option>
+                    <option value="UTC+03:00">(UTC+03:00) 努克</option>
+                    <option value="UTC+00:00">(UTC+00:00) 单马沙文</option>
+                    <option value="UTC+01:00">(UTC+01:00) 斯科列斯比桑德</option>
+                    <option value="UTC+04:00">(UTC+04:00) 图勒</option>
+                    <option value="UTC+02:00">(UTC+02:00) 雅典</option>
+                    <option value="UTC+02:00">(UTC+02:00) 南乔治亚</option>
+                    <option value="UTC+06:00">(UTC+06:00) 危地马拉</option>
+                    <option value="UTC+10:00">(UTC+10:00) 关岛</option>
+                    <option value="UTC+00:00">(UTC+00:00) 比绍</option>
+                    <option value="UTC+04:00">(UTC+04:00) 圭亚那</option>
+                    <option value="UTC+06:00">(UTC+06:00) 特古西加尔巴</option>
+                    <option value="UTC+05:00">(UTC+05:00) 太子港</option>
+                    <option value="UTC+01:00">(UTC+01:00) 布达佩斯</option>
+                    <option value="UTC+07:00">(UTC+07:00) 雅加达</option>
+                    <option value="UTC+07:00">(UTC+07:00) 坤甸</option>
+                    <option value="UTC+08:00">(UTC+08:00) 望加锡</option>
+                    <option value="UTC+09:00">(UTC+09:00) 查亚普拉</option>
+                    <option value="UTC+00:00">(UTC+00:00) 都柏林</option>
+                    <option value="UTC+02:00">(UTC+02:00) 耶路撒冷</option>
+                    <option value="UTC+05:30">(UTC+05:30) 加尔各答</option>
+                    <option value="UTC+06:00">(UTC+06:00) 查戈斯群岛</option>
+                    <option value="UTC+03:00">(UTC+03:00) 巴格达</option>
+                    <option value="UTC+03:30">(UTC+03:30) 德黑兰</option>
+                    <option value="UTC+00:00">(UTC+00:00) 雷克雅未克</option>
+                    <option value="UTC+01:00">(UTC+01:00) 罗马</option>
+                    <option value="UTC+05:00">(UTC+05:00) 牙买加</option>
+                    <option value="UTC+02:00">(UTC+02:00) 安曼</option>
+                    <option value="UTC+09:00">(UTC+09:00) 东京</option>
+                    <option value="UTC+03:00">(UTC+03:00) 内罗毕</option>
+                    <option value="UTC+06:00">(UTC+06:00) 比什凯克</option>
+                    <option value="UTC+12:00">(UTC+12:00) 塔拉瓦</option>
+                    <option value="UTC+13:00">(UTC+13:00) 恩德伯里</option>
+                    <option value="UTC+14:00">(UTC+14:00) 基里地马地岛</option>
+                    <option value="UTC+08:30">(UTC+08:30) 平壤</option>
+                    <option value="UTC+09:00">(UTC+09:00) 首尔</option>
+                    <option value="UTC+06:00">(UTC+06:00) 阿拉木图</option>
+                    <option value="UTC+06:00">(UTC+06:00) 科兹洛尔达</option>
+                    <option value="UTC+06:00">(UTC+06:00) 库斯塔奈</option>
+                    <option value="UTC+05:00">(UTC+05:00) 阿克托别</option>
+                    <option value="UTC+05:00">(UTC+05:00) 阿克套</option>
+                    <option value="UTC+05:00">(UTC+05:00) 阿特劳</option>
+                    <option value="UTC+05:00">(UTC+05:00) 乌拉尔</option>
+                    <option value="UTC+02:00">(UTC+02:00) 贝特鲁</option>
+                    <option value="UTC+05:30">(UTC+05:30) 科伦坡</option>
+                    <option value="UTC+00:00">(UTC+00:00) 蒙罗维亚</option>
+                    <option value="UTC+01:00">(UTC+01:00) 维尔纽斯</option>
+                    <option value="UTC+02:00">(UTC+02:00) 里加</option>
+                    <option value="UTC+02:00">(UTC+02:00) 的黎波里</option>
+                    <option value="UTC+01:00">(UTC+01:00) 摩纳哥</option>
+                    <option value="UTC+00:00">(UTC+00:00) 卡萨布兰卡</option>
+                    <option value="UTC+02:00">(UTC+02:00) 基希讷乌</option>
+                    <option value="UTC+12:00">(UTC+12:00) 夸贾林</option>
+                    <option value="UTC+06:00">(UTC+06:00) 仰光</option>
+                    <option value="UTC+08:00">(UTC+08:00) 乌兰巴托</option>
+                    <option value="UTC+07:00">(UTC+07:00) 科布多</option>
+                    <option value="UTC+08:00">(UTC+08:00) 乔巴山</option>
+                    <option value="UTC+04:00">(UTC+04:00) 马提尼克</option>
+                    <option value="UTC+01:00">(UTC+01:00) 马耳他</option>
+                    <option value="UTC+04:00">(UTC+04:00) 毛里求斯</option>
+                    <option value="UTC+05:00">(UTC+05:00) 马尔代夫</option>
+                    <option value="UTC+06:00">(UTC+06:00) 墨西哥城</option>
+                    <option value="UTC+05:00">(UTC+05:00) 坎昆</option>
+                    <option value="UTC+06:00">(UTC+06:00) 梅里达</option>
+                    <option value="UTC+06:00">(UTC+06:00) 蒙特雷</option>
+                    <option value="UTC+06:00">(UTC+06:00) 马塔莫罗斯</option>
+                    <option value="UTC+07:00">(UTC+07:00) 马萨特兰</option>
+                    <option value="UTC+07:00">(UTC+07:00) 奇瓦瓦</option>
+                    <option value="UTC+07:00">(UTC+07:00) 奥希纳加</option>
+                    <option value="UTC+07:00">(UTC+07:00) 埃莫西约</option>
+                    <option value="UTC+08:00">(UTC+08:00) 蒂华纳</option>
+                    <option value="UTC+06:00">(UTC+06:00) 巴伊亚班德拉斯</option>
+                    <option value="UTC+08:00">(UTC+08:00) 吉隆坡</option>
+                    <option value="UTC+08:00">(UTC+08:00) 古晋</option>
+                    <option value="UTC+02:00">(UTC+02:00) 马普托</option>
+                    <option value="UTC+02:00">(UTC+02:00) 温得和克</option>
+                    <option value="UTC+11:00">(UTC+11:00) 努美亚</option>
+                    <option value="UTC+11:00">(UTC+11:00) 诺福克岛</option>
+                    <option value="UTC+01:00">(UTC+01:00) 拉各斯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 马那瓜</option>
+                    <option value="UTC+01:00">(UTC+01:00) 阿姆斯特丹</option>
+                    <option value="UTC+01:00">(UTC+01:00) 奥斯陆</option>
+                    <option value="UTC+05:00">(UTC+05:00) 加德满都</option>
+                    <option value="UTC+12:00">(UTC+12:00) 瑙鲁</option>
+                    <option value="UTC+11:00">(UTC+11:00) 纽埃</option>
+                    <option value="UTC+12:00">(UTC+12:00) 奥克兰</option>
+                    <option value="UTC+12:45">(UTC+12:45) 查塔姆</option>
+                    <option value="UTC+05:00">(UTC+05:00) 巴拿马</option>
+                    <option value="UTC+05:00">(UTC+05:00) 利马</option>
+                    <option value="UTC+10:00">(UTC+10:00) 塔西提</option>
+                    <option value="UTC+09:30">(UTC+09:30) 马克萨斯</option>
+                    <option value="UTC+09:00">(UTC+09:00) 甘比尔</option>
+                    <option value="UTC+10:00">(UTC+10:00) 莫尔兹比港</option>
+                    <option value="UTC+11:00">(UTC+11:00) 布干维尔</option>
+                    <option value="UTC+08:00">(UTC+08:00) 马尼拉</option>
+                    <option value="UTC+05:00">(UTC+05:00) 卡拉奇</option>
+                    <option value="UTC+01:00">(UTC+01:00) 华沙</option>
+                    <option value="UTC+03:00">(UTC+03:00) 密克隆群岛</option>
+                    <option value="UTC+08:00">(UTC+08:00) 皮特凯恩群岛</option>
+                    <option value="UTC+04:00">(UTC+04:00) 波多黎各</option>
+                    <option value="UTC+02:00">(UTC+02:00) 加沙</option>
+                    <option value="UTC+02:00">(UTC+02:00) 希伯伦</option>
+                    <option value="UTC+00:00">(UTC+00:00) 里斯本</option>
+                    <option value="UTC+00:00">(UTC+00:00) 马德拉</option>
+                    <option value="UTC+01:00">(UTC+01:00) 亚速尔群岛</option>
+                    <option value="UTC+09:00">(UTC+09:00) 帕劳</option>
+                    <option value="UTC+04:00">(UTC+04:00) 亚松森</option>
+                    <option value="UTC+03:00">(UTC+03:00) 卡塔尔</option>
+                    <option value="UTC+04:00">(UTC+04:00) 留尼汪</option>
+                    <option value="UTC+02:00">(UTC+02:00) 布加勒斯特</option>
+                    <option value="UTC+01:00">(UTC+01:00) 贝格尔莱德</option>
+                    <option value="UTC+02:00">(UTC+02:00) 加里宁格勒</option>
+                    <option value="UTC+03:00">(UTC+03:00) 莫斯科</option>
+                    <option value="UTC+03:00">(UTC+03:00) 辛菲罗波尔</option>
+                    <option value="UTC+03:00">(UTC+03:00) 基洛夫</option>
+                    <option value="UTC+04:00">(UTC+04:00) 阿斯特拉罕</option>
+                    <option value="UTC+03:00">(UTC+03:00) 伏尔加格勒</option>
+                    <option value="UTC+04:00">(UTC+04:00) 萨拉托夫</option>
+                    <option value="UTC+04:00">(UTC+04:00) 乌里扬诺夫斯克</option>
+                    <option value="UTC+04:00">(UTC+04:00) 萨马拉</option>
+                    <option value="UTC+05:00">(UTC+05:00) 叶卡捷琳堡</option>
+                    <option value="UTC+06:00">(UTC+06:00) 鄂木斯克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 诺沃西比尔斯克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 巴尔瑙尔</option>
+                    <option value="UTC+07:00">(UTC+07:00) 托木斯克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 新库兹涅茨克</option>
+                    <option value="UTC+07:00">(UTC+07:00) 克拉斯诺亚尔斯克</option>
+                    <option value="UTC+08:00">(UTC+08:00) 伊尔库茨克</option>
+                    <option value="UTC+09:00">(UTC+09:00) 赤塔</option>
+                    <option value="UTC+09:00">(UTC+09:00) 雅库茨克</option>
+                    <option value="UTC+09:00">(UTC+09:00) 汉德加</option>
+                    <option value="UTC+10:00">(UTC+10:00) 符拉迪沃斯托克</option>
+                    <option value="UTC+10:00">(UTC+10:00) 乌斯内拉</option>
+                    <option value="UTC+11:00">(UTC+11:00) 马加丹</option>
+                    <option value="UTC+11:00">(UTC+11:00) 萨哈林</option>
+                    <option value="UTC+11:00">(UTC+11:00) 中科雷姆斯克</option>
+                    <option value="UTC+12:00">(UTC+12:00) 堪察加</option>
+                    <option value="UTC+12:00">(UTC+12:00) 阿纳德尔</option>
+                    <option value="UTC+03:00">(UTC+03:00) 利雅得</option>
+                    <option value="UTC+11:00">(UTC+11:00) 瓜达尔卡纳尔岛</option>
+                    <option value="UTC+04:00">(UTC+04:00) 马埃岛</option>
+                    <option value="UTC+02:00">(UTC+02:00) 喀土穆</option>
+                    <option value="UTC+01:00">(UTC+01:00) 斯德哥尔摩</option>
+                    <option value="UTC+08:00">(UTC+08:00) 新加坡</option>
+                    <option value="UTC+03:00">(UTC+03:00) 帕拉马里博</option>
+                    <option value="UTC+03:00">(UTC+03:00) 朱巴</option>
+                    <option value="UTC+00:00">(UTC+00:00) 圣多美</option>
+                    <option value="UTC+06:00">(UTC+06:00) 萨尔瓦多</option>
+                    <option value="UTC+02:00">(UTC+02:00) 大马士革</option>
+                    <option value="UTC+05:00">(UTC+05:00) 特克斯</option>
+                    <option value="UTC+01:00">(UTC+01:00) 恩贾梅纳</option>
+                    <option value="UTC+05:00">(UTC+05:00) 凯尔盖朗</option>
+                    <option value="UTC+07:00">(UTC+07:00) 曼谷</option>
+                    <option value="UTC+05:00">(UTC+05:00) 杜尚别</option>
+                    <option value="UTC+12:00">(UTC+12:00) 法考福</option>
+                    <option value="UTC+09:00">(UTC+09:00) 帝力</option>
+                    <option value="UTC+05:00">(UTC+05:00) 阿什哈巴德</option>
+                    <option value="UTC+01:00">(UTC+01:00) 突尼斯</option>
+                    <option value="UTC+13:00">(UTC+13:00) 汤加塔布</option>
+                    <option value="UTC+03:00">(UTC+03:00) 伊斯坦布尔</option>
+                    <option value="UTC+04:00">(UTC+04:00) 西班牙港</option>
+                    <option value="UTC+12:00">(UTC+12:00) 富纳富提</option>
+                    <option value="UTC+02:00">(UTC+02:00) 基辅</option>
+                    <option value="UTC+02:00">(UTC+02:00) 乌日哥罗德</option>
+                    <option value="UTC+02:00">(UTC+02:00) 扎波罗热</option>
+                    <option value="UTC+12:00">(UTC+12:00) 威克</option>
+                    <option value="UTC+05:00">(UTC+05:00) 纽约</option>
+                    <option value="UTC+05:00">(UTC+05:00) 底特律</option>
+                    <option value="UTC+05:00">(UTC+05:00) 路易斯维尔</option>
+                    <option value="UTC+05:00">(UTC+05:00) 蒙蒂塞洛</option>
+                    <option value="UTC+05:00">(UTC+05:00) 印第安纳波利斯</option>
+                    <option value="UTC+05:00">(UTC+05:00) 温森斯</option>
+                    <option value="UTC+05:00">(UTC+05:00) 威纳马克</option>
+                    <option value="UTC+05:00">(UTC+05:00) 马伦戈</option>
+                    <option value="UTC+05:00">(UTC+05:00) 彼得斯堡</option>
+                    <option value="UTC+05:00">(UTC+05:00) 维维市</option>
+                    <option value="UTC+06:00">(UTC+06:00) 芝加哥</option>
+                    <option value="UTC+06:00">(UTC+06:00) 特尔城</option>
+                    <option value="UTC+06:00">(UTC+06:00) 诺克斯</option>
+                    <option value="UTC+06:00">(UTC+06:00) 梅诺米尼</option>
+                    <option value="UTC+06:00">(UTC+06:00) 申特</option>
+                    <option value="UTC+06:00">(UTC+06:00) 新塞勒姆</option>
+                    <option value="UTC+06:00">(UTC+06:00) 比尤拉</option>
+                    <option value="UTC+07:00">(UTC+07:00) 丹佛</option>
+                    <option value="UTC+07:00">(UTC+07:00) 博伊西</option>
+                    <option value="UTC+07:00">(UTC+07:00) 凤凰城</option>
+                    <option value="UTC+07:00">(UTC+07:00) 洛杉矶</option>
+                    <option value="UTC+07:00">(UTC+07:00) 安克雷奇</option>
+                    <option value="UTC+08:00">(UTC+08:00) 锡特卡</option>
+                    <option value="UTC+08:00">(UTC+08:00) 梅特拉卡特拉</option>
+                    <option value="UTC+09:00">(UTC+09:00) 朱诺</option>
+                    <option value="UTC+09:00">(UTC+09:00) 亚库塔特</option>
+                    <option value="UTC+09:00">(UTC+09:00) 诺姆</option>
+                    <option value="UTC+10:00">(UTC+10:00) 埃达克</option>
+                    <option value="UTC+10:00">(UTC+10:00) 火奴鲁鲁</option>
+                    <option value="UTC+03:00">(UTC+03:00) 蒙得维的亚</option>
+                    <option value="UTC+05:00">(UTC+05:00) 撒马尔罕</option>
+                    <option value="UTC+05:00">(UTC+05:00) 塔什干</option>
+                    <option value="UTC+04:00">(UTC+04:00) 加拉加斯</option>
+                    <option value="UTC+07:00">(UTC+07:00) 胡志明市</option>
+                    <option value="UTC+11:00">(UTC+11:00) 埃法特岛</option>
+                    <option value="UTC+12:00">(UTC+12:00) 瓦利斯</option>
+                                    
+                </select>
+    
+                <div id="world"></div>
+    
+                <button id="nextButton3">下一步</button>
+            </div>
+
+        </div>
+
+
+        <!-- 页面 4 内容 -->
+        <div class="page" id="page4">
+            <table class="path-table" align="center" cellpadding="10" cellspacing="0" border="0">
+                <th><h2>选择安装路径</h2></th>
+                <tr>
+                    <td>
+                        <label style="color: white;"><input type="radio" name="path" value="Live" checked> 从Live安装</label>                 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label style="color: white;"><input id="GhostInstall" type="radio" name="path" value="Ghost"> 从Ghost安装</label>                     
+                    </td>
+                </tr>
+
+        
+                <tr id="folderInputRow">
+                    <td>
+                        <input type="text" id="folderInput" style="background-color: transparent; border:2px solid black;">
+                        <button id="checkFile">打开文件</button>
+                        <input type="file" id="fileInput" style="display: none;" accept=".img,.IMG,.kyimg">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="nextButton4">下一步</button>
+                    </td>  
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- 页面 5 内容 -->
+        <div class="page" id="page5">
+            <h2 id="installMethodTitle">选择安装方式</h2>
+            <button id="fullInstallButton">全盘安装</button>
+            <button id="customInstallButton">自定义安装</button>
+            <div id="fullInstallContent" style="display: none;">
+                <!-- 全盘安装界面内容 -->
+                    <!-- 选择选项 -->
+                <input type="checkbox" id="acceptCheckbox">
+
+                <!-- 图片和配置说明 -->
+                <div class="option-details">
+                    <img src="../img/disk.png" alt="图片" width="100" height="100">
+                    <p>/dev/sda <br> VMware, VMware <br> Virtual S</p>
+                </div>
+
+                <!-- 全盘加密 -->
+                <div class="install-option">
+                    <input type="checkbox" id="encryptCheckbox">
+                    <label for="encryptCheckbox">全盘加密</label>
+                </div>
+
+                <!-- 逻辑卷 -->
+                <div class="install-option">
+                    <input type="checkbox" id="logicalVolumeCheckbox">
+                    <label for="logicalVolumeCheckbox">选择逻辑卷</label>
+                </div>
+
+                <button id="nextButton5">下一步</button>
+            </div>
+            
+            <div id="customInstallContent" style="display: none;">
+                <!-- 自定义安装界面内容 -->
+                <table border="1" style="color: white;"> 
+                    <tr>
+                        <td colspan="6" style="text-align: left;">/dev/sda</td>
+                        <td colspan="2"><button>创建分区表</button></td>
+                    </tr>
+                    <tr>
+                        <th>设备</th>
+                        <th>类型</th>
+                        <th>挂载点</th>
+                        <th>大小</th>
+                        <th>已用</th>
+                        <th>系统</th>
+                        <th>格式化</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>空闲</td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="text" id="PartitionSize" readonly style="color: white;"></td>
+                        <td></td>
+                        <td></td>
+                        <td>否</td>
+                        <td><button id="newPartition" style="color: white;">新建分区</button></td>
+                    </tr>
+                </table>
+  
+                <button id="nextButton5_2">下一步</button>
+   
+            </div>
+
+            <!-- 新建分区界面 -->
+            <div id="newPartitionForm">
+                <h2 style="color: white;">新建分区</h2>
+                <table>
+                    <tr>
+                        <td style="color: white; text-align: left; padding: 8px;">新分区的类型:</td>
+
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding: 8px;">
+                            <label style="color: white;"><input type="radio" name="partitionType" value="主分区" checked> 主分区</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; text-align: left; padding: 8px;">新分区的位置:</td>
+
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding: 8px;">
+                            <label style="color: white;"><input type="radio" name="partitionLocation" value="head" checked> 剩余空间头部</label>
+                            <label style="color: white; margin-left: 10px;"><input type="radio" name="partitionLocation" value="tail"> 剩余空间尾部</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;text-align: left; padding: 8px;">用于:</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding: 8px; ">
+                            <select id="use" style="border: 1px solid black; height: 100%; width: 100%; background-color: transparent;">
+                                <option value="ext4">ext4</option>
+                                <option value="ext3">ext3</option>
+                                <option value="xfs">xfs</option>
+                                <option value="btrfs">btrfs</option>
+                                <option value="userData">用户数据分区</option>
+                                <option value="efi">efi</option>
+                                <option value="linux-swap">linux-swap</option>
+                                <option value="noUse">不适用</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; text-align: left; padding: 8px;">挂载点:</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; padding: 8px;">
+                            <select id="mountPoint" style="background-color: transparent; border: 1px solid black; height: 100%; width: 100%;">
+                                <option value="/">/</option>
+                                <option value="/boot">/boot</option>
+                                <option value="/backup">/backup</option>
+                                <option value="/tmp">/tmp</option>
+                                <option value="/data">/data</option>
+                                <option value="/swap">/swap</option>
+                                <option value="/home">/home</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: white; text-align: left; padding: 8px;">大小(MiB):</td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="color: white; text-align: left; padding: 8px; "><input type="number" id="size" min="1" value="61440" max="61440" style="border: 1px solid black; height: 100%; width: 100%; background-color: transparent;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id='createPartitionButton'>确定</button> </td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <!-- 修改选项界面 -->
+            <div id="editOptionsForm" style="display: none;">
+                <h2>修改选项</h2>
+                <table>
+                    <tr>
+                        <td>用于：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="editUse" style="background-color: transparent; border: 2px solid black;height: 100%; width: 100%;">
+                                <option value="ext4">ext4</option>
+                                <option value="ext3">ext3</option>
+                                <option value="xfs">xfs</option>
+                                <option value="btrfs">btrfs</option>
+                                <option value="userData">用户数据分区</option>
+                                <option value="efi">efi</option>
+                                <option value="linux-swap">linux-swap</option>
+                                <option value="noUse">不适用</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>挂载点:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="editMountPoint" style="background-color: transparent; border: 2px solid black;height: 100%; width: 100%;">
+                                <option value="/">/</option>
+                                <option value="/boot">/boot</option>
+                                <option value="/backup">/backup</option>
+                                <option value="/tmp">/tmp</option>
+                                <option value="/data">/data</option>
+                                <option value="/swap">/swap</option>
+                                <option value="/home">/home</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='updateOptionsButton'>确定</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            
+        </div>
+
+        <!-- 页面 6 内容 -->
+        <div class="page" id="page6">
+            <div id="confirmation" style="text-align: center;">
+                <h2>确认自定义安装</h2>
+                <textarea id="confirmLicenseText" rows="25" cols="130" readonly style="background-color: transparent; border: 2px solid black; color: white;">                </textarea>
+                <br>
+                <!-- 勾选框 -->
+                <div class="checkbox-confirm">
+                    <label style="color: white;"><input type="checkbox" id="confirmationCheckbox">确认以上操作</label>
+                </div>
+                <br>
+                <button id="nextButton6" style="margin-top: 10px;">下一步</button>
+            </div>   
+        </div>
+        
+
+        <!-- 页面 7 内容 -->
+        <div class="page" id="page7" style="text-align: center;">
+            <table class="createAccount" align="center" cellpadding="10" cellspacing="0" border="0">
+                <th><h2>创建账户</h2></th>
+                <tr>
+                    <td>
+                        <label style="color: white;"><input type="radio" name="path" value="immediately" checked> 立即创建</label>                 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label style="color: white;"><input type="radio" name="path" value="later"> 稍后创建</label>                     
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="nextButton7">确认</button>
+                    </td>  
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <!-- 退出按钮 -->
+        <button id="exit">退出</button>
+    </div>
+
+
+    <script type="module">
+        var option = window.echarts.option;
+        const driver = window.driver.js.driver; 
+
+        let currentPageIndex = 1;
+        const pages = document.querySelectorAll('.page');
+        const backButton = document.getElementById('backBtn');
+
+        // 系统大小
+        let partitionSizeMiB = 61440;
+
+        // 创建分区的次数
+        let newPartitionNumber = 0;
+
+        // 要修改的行
+        let editRow = null;
+
+        // 页面加载时执行初始化操作
+        window.onload = function() {
+            // 在页面加载时隐藏返回按钮
+            updateBackButtonVisibility();
+        
+            // 设置
+            document.getElementById("PartitionSize").value = partitionSizeMiB + " MiB";
+
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                allowClose: false,      // 
+                Animation:true,
+                overlayClickNext: false,  // 是否点击阴影时下一步
+                showProgress: true,
+                opacity: 0,
+                steps: [
+                {
+                    element: '.page.active .language-table label:nth-of-type(1)', // 选择中文简体的单选框
+                    popover: {
+                        title: '第一步',
+                        description: '选择安装语言。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                        alige: 'start',
+                    },
+                },
+                {
+                    element: '.page.active .language-table button', // 下一步按钮
+                    popover: {
+                        title: '第二步',
+                        description: '点击下一步。',
+                        doneBtnText: '完成',
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                    }
+                },
+                ]
+            });
+
+            driverObj.drive();
+        }
+
+        // 更新返回按钮的可见性
+        function updateBackButtonVisibility() {
+            if (currentPageIndex === 1) {
+                backButton.style.display = 'none'; // 隐藏返回按钮
+            } else {
+                backButton.style.display = 'block'; // 显示返回按钮
+            }
+        }
+
+        // 跳转到下一页
+        function nextPage() {
+            pages[currentPageIndex - 1].classList.remove('active');
+            currentPageIndex++;
+            pages[currentPageIndex - 1].classList.add('active');
+
+            updateBackButtonVisibility();
+        }
+        
+         // 返回首页
+         function goToHomePage() {
+            window.location.href = 'index.html'; // 跳转到首页
+        }
+        
+        // 返回上一页
+        function goBack() {
+            if (currentPageIndex > 1) {
+                pages[currentPageIndex - 1].classList.remove('active');
+                currentPageIndex--;
+                pages[currentPageIndex - 1].classList.add('active');
+            
+            }
+            updateBackButtonVisibility();
+            
+        }
+        
+        // 第一页的跳转
+        function NextPage1() {
+            nextPage();
+
+            // 更新引导
+            updateGuideSteps1();
+        }
+
+        // 第二页的更新引导步骤
+        function updateGuideSteps1() {
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                allowClose: false,      // 
+                Animation:true,
+                overlayClickNext: false,  // 是否点击阴影时下一步
+                showProgress: true,
+                opacity: 0,
+                steps: [
+                {
+                    element: '.content-container textarea',
+                    popover: {
+                        title: '第一步',
+                        description: '阅读许可协议。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                        alige: 'start',
+                    },
+                },
+                {
+                    element: '.content-container .checkbox-container label', 
+                    popover: {
+                        title: '第二步',
+                        description: '勾选同意条款。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                    }
+                },
+                {
+                        element: '.content-container .button-container button' , // 点击下一步
+                        popover: {
+                            title: '第三步',
+                            description: '点击下一步。',
+                            doneBtnText: '完成',
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: 'right',
+                        }
+                    },
+
+                ]
+            });
+
+            driverObj.drive();
+
+        }
+    
+        // 第二页的跳转
+        function NextPage2() {
+            var agreeCheckbox = document.getElementById('agreeCheckbox');
+            if (agreeCheckbox.checked) {
+                nextPage();
+                drawWorldMap();
+                updateGuideSteps2();
+            } else {
+                // 如果勾选框未被选中，则禁用下一步按钮
+                alert("勾选同意选框。");
+            }
+        }
+
+        // 第三页的更新引导步骤
+        function updateGuideSteps2(){
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                    allowClose: false,      // 
+                    Animation:true,
+                    overlayClickNext: false,  // 是否点击阴影时下一步
+                    showProgress: true,
+                    opacity: 0,
+                    steps: [
+                    {
+                        element: '#timezoneSelect',
+                        popover: {
+                            title: '第一步',
+                            description: '选择北京时区。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        },
+                    },
+                    {
+                            element: '.timezoneOptions button' , // 点击下一步
+                            popover: {
+                                title: '第二步',
+                                description: '点击下一步。',
+                                doneBtnText: '完成',
+                                prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                                side: 'right',
+                            }
+                        },
+
+                    ]
+                });
+
+                driverObj.drive();
+        }
+
+        // 第三页的跳转
+        function NextPage3() {
+            nextPage();
+            updateGuideSteps3();
+        }
+
+        // 第四页的更新引导步骤
+        function updateGuideSteps3(){
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                    allowClose: false,      // 
+                    Animation:true,
+                    overlayClickNext: false,  // 是否点击阴影时下一步
+                    showProgress: true,
+                    opacity: 0,
+                    steps: [
+                    {
+                        element: '.path-table label:first-child',
+                        popover: {
+                            title: '第一步',
+                            description: '选择 Live 安装。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        },
+                    },
+                    {
+                            element: '.path-table #nextButton4' , // 点击下一步
+                            popover: {
+                                title: '第二步',
+                                description: '点击进行下一步。',
+                                doneBtnText: '完成',
+                                prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                                side: 'right',
+                            }
+                        },
+
+                    ]
+                });
+
+                driverObj.drive();
+
+        }
+       
+        // 第四页的跳转
+        function NextPage4(){
+            // 获取两个单选按钮
+            var liveInstallRadioButton = document.querySelector('input[value="Live"]');
+            var ghostInstallRadioButton = document.querySelector('input[value="Ghost"]');
+            // 检查是否有任何单选按钮被选中
+            if (!liveInstallRadioButton.checked && !ghostInstallRadioButton.checked) {
+                // 如果没有任何单选按钮被选中
+                alert("请选择安装路径");
+            }
+            else{
+                nextPage();
+                updateGuideSteps4();
+            }
+
+        }
+
+        // 第五页的更新引导步骤
+        function updateGuideSteps4(){
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                    allowClose: false,
+                    Animation:true,
+                    overlayClickNext: false,  // 是否点击阴影时下一步
+                    showProgress: true,
+                    opacity: 0,
+                    steps: [
+                    {
+                        element: '#page5 button:nth-child(3)',
+                        popover: {
+                            title: '第一步',
+                            description: '点击自定义安装。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                            onNextClick: () => {
+                                showCustomInstall();
+                                driverObj.moveNext();
+                            },
+                        },
+  
+                    },
+                    {
+                        element: '#customInstallContent #newPartition' , // 点击下一步
+                        popover: {
+                            title: '第二步',
+                            description: '点击新建分区。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                            onNextClick: () => {
+                                addPartition();
+                                driverObj.moveNext();
+                            },
+                        }
+                    },
+                    {
+                        element: '#newPartitionForm label input[name="partitionLocation"]' , // 点击下一步
+                        popover: {
+                            title: '第三步',
+                            description: '选择新分区的位置。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "top",
+                            alige: 'start',
+                        }
+                    },
+                    {
+                        element: '#newPartitionForm #use' , // 点击下一步
+                        popover: {
+                            title: '第四步',
+                            description: '选择文件类型为 /ext4。',
+                            // doneBtnText: '完成',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        }
+                    },
+                    {
+                        element: '#newPartitionForm #mountPoint' , // 点击下一步
+                        popover: {
+                            title: '第五步',
+                            description: '选择挂载点为 /。',
+                            // doneBtnText: '完成',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        }
+                    },
+                    {
+                        element: '#newPartitionForm #size' , // 点击下一步
+                        popover: {
+                            title: '第六步',
+                            description: '输入大小为 25600。',
+                            // doneBtnText: '完成',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        }
+                    },
+                    {
+                        element: '#newPartitionForm #createPartitionButton' , // 点击下一步
+                        popover: {
+                            title: '第七步',
+                            description: '点击确定。',
+                            nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                            onNextClick: () => {
+                                if(newPartitionNumber === 0){
+                                    createPartition();
+                                    hideNewPartitionForm();
+                                    driverObj.moveNext();
+                                }
+                                else{
+                                    hideNewPartitionForm();
+                                    driverObj.moveNext();
+                                } 
+                            },
+                        }
+                    },
+                   
+                    {
+                        element: '#customInstallContent #nextButton5_2' , // 点击下一步
+                        popover: {
+                            title: '第八步',
+                            description: '点击下一步。',
+                            doneBtnText: '完成',
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: "right",
+                            alige: 'start',
+                        }
+                    },
+
+                    ]
+                });
+
+                driverObj.drive();
+        }
+
+        // 第五页的跳转
+        function NextPage5(){
+            nextPage();
+            addTextToTextarea();
+            updateGuideSteps5();
+        }
+
+        //第六页的更新引导步骤
+        function updateGuideSteps5(){
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                allowClose: false,      // 
+                Animation:true,
+                overlayClickNext: false,  // 是否点击阴影时下一步
+                showProgress: true,
+                opacity: 0,
+                steps: [
+                {
+                    element: '#confirmation #confirmLicenseText',
+                    popover: {
+                        title: '第一步',
+                        description: '查看自定义安装。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                        alige: 'start',
+                    },
+                },
+                {
+                    element: '#confirmation .checkbox-confirm label', 
+                    popover: {
+                        title: '第二步',
+                        description: '确认自定义安装。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                    }
+                },
+                {
+                        element: '#confirmation #nextButton6' , // 点击下一步
+                        popover: {
+                            title: '第三步',
+                            description: '点击下一步。',
+                            doneBtnText: '完成',
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: 'right',
+                        }
+                    },
+
+                ]
+            });
+
+            driverObj.drive();
+
+        }
+
+        // 第六页的跳转
+        function NextPage6(){
+            // 获取复选框元素
+            const checkbox = document.getElementById('confirmationCheckbox');
+
+            // 检查复选框是否被选中
+            if (checkbox.checked) {
+                nextPage();
+                updateGuideSteps6();
+            }
+            else{
+                // 如果未被选中，给出提示
+                alert('请确认以上操作');
+            }
+        }
+
+        // 第七页的引导
+        function updateGuideSteps6(){
+            // 创建一个新的 Driver 实例
+            const driverObj = driver({
+                allowClose: false,      // 
+                Animation:true,
+                overlayClickNext: false,  // 是否点击阴影时下一步
+                showProgress: true,
+                opacity: 0,
+                steps: [
+                {
+                    element: '.createAccount label:first-child',
+                    popover: {
+                        title: '第一步',
+                        description: '选择立即安装。',
+                        nextBtnText: '下一步',        // Next button text for this step 下一步按钮文字
+                        prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                        side: "right",
+                        alige: 'start',
+                    },
+                },
+                {
+                        element: '.createAccount #nextButton7' , // 点击下一步
+                        popover: {
+                            title: '第二步',
+                            description: '点击确认。',
+                            doneBtnText: '完成',
+                            prevBtnText: '上一步',    // Previous button text for this step 上一步按钮文字
+                            side: 'right',
+                        }
+                    },
+                ]
+            });
+
+            driverObj.drive();
+
+        }
+
+        function NextPage7(){
+            // 获取单选按钮
+            var immediatelyRadioButton = document.querySelector('input[value="immediately"]');
+            var laterRadioButton = document.querySelector('input[value="later"]');
+
+            if (!immediatelyRadioButton.checked && !laterRadioButton.checked) {
+                // 如果没有任何单选按钮被选中
+                alert("请选择是否立即创建");
+            }
+            else{
+                var configJson = readAllJsonData();
+                // retrieveConfigFromLocalStorage();
+                // 调用函数发送数据到服务器
+                sendDataToServer();
+            }
+        }
+
+        function sendDataToServer() {
+            alert("send");
+            var data = readAllJsonData();
+
+            // 构建请求配置对象
+            var requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            };
+
+            // 发送请求
+            fetch('http://localhost:8000', requestOptions)
+                .then(response => response.json()) // 解析响应数据为JSON
+                .then(data => {
+                    console.log('Response from server:', data);
+                    // 在这里处理服务器响应的数据
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // 在这里处理请求失败的情况
+                });
+        }
+
+
+
+
+        // 按钮添加监听事件
+        document.getElementById('backBtn').addEventListener('click',  goBack);
+        document.getElementById('exit').addEventListener('click', goToHomePage);
+        document.getElementById('nextButton1').addEventListener('click', NextPage1);
+        document.getElementById('nextButton2').addEventListener('click', NextPage2);
+        document.getElementById('nextButton3').addEventListener('click', NextPage3);
+        document.getElementById('nextButton4').addEventListener('click', NextPage4);
+        document.getElementById('nextButton5').addEventListener('click', NextPage5);
+        document.getElementById('nextButton5_2').addEventListener('click', NextPage5);
+        document.getElementById('nextButton6').addEventListener('click', NextPage6);
+        document.getElementById('nextButton7').addEventListener('click', NextPage7);
+        document.getElementById('customInstallButton').addEventListener('click', showCustomInstall);
+        document.getElementById('fullInstallButton').addEventListener('click', showFullInstall);
+        document.getElementById('newPartition').addEventListener('click', addPartition);
+        document.getElementById('createPartitionButton').addEventListener('click', createPartition);
+        document.getElementById('updateOptionsButton').addEventListener('click', updateOptions);
+        document.getElementById('GhostInstall').addEventListener('click', showFolderInput);
+        document.getElementById('checkFile').addEventListener('click',  openFile);
+        
+        // 绘制地图
+        function drawWorldMap(){
+            var myChart = echarts.init(document.getElementById('world'));
+            let nameMap = {
+                Afghanistan: '阿富汗',
+                Singapore: '新加坡',
+                Angola: '安哥拉',
+                Albania: '阿尔巴尼亚',
+                'United Arab Emirates': '阿联酋',
+                Argentina: '阿根廷',
+                Armenia: '亚美尼亚',
+                'French Southern and Antarctic Lands':
+                    '法属南半球和南极领地',
+                Australia: '澳大利亚',
+                Austria: '奥地利',
+                Azerbaijan: '阿塞拜疆',
+                Burundi: '布隆迪',
+                Belgium: '比利时',
+                Benin: '贝宁',
+                'Burkina Faso': '布基纳法索',
+                Bangladesh: '孟加拉国',
+                Bulgaria: '保加利亚',
+                'The Bahamas': '巴哈马',
+                'Bosnia and Herzegovina': '波斯尼亚和黑塞哥维那',
+                Belarus: '白俄罗斯',
+                Belize: '伯利兹',
+                Bermuda: '百慕大',
+                Bolivia: '玻利维亚',
+                Brazil: '巴西',
+                Brunei: '文莱',
+                Bhutan: '不丹',
+                Botswana: '博茨瓦纳',
+                'Central African Republic': '中非共和国',
+                Canada: '加拿大',
+                Switzerland: '瑞士',
+                Chile: '智利',
+                China: '中国',
+                'Ivory Coast': '象牙海岸',
+                Cameroon: '喀麦隆',
+                'Democratic Republic of the Congo': '刚果民主共和国',
+                'Republic of the Congo': '刚果共和国',
+                Colombia: '哥伦比亚',
+                'Costa Rica': '哥斯达黎加',
+                Cuba: '古巴',
+                'Northern Cyprus': '北塞浦路斯',
+                Cyprus: '塞浦路斯',
+                'Czech Republic': '捷克共和国',
+                Germany: '德国',
+                Djibouti: '吉布提',
+                Denmark: '丹麦',
+                'Dominican Republic': '多明尼加共和国',
+                Algeria: '阿尔及利亚',
+                Ecuador: '厄瓜多尔',
+                Egypt: '埃及',
+                Eritrea: '厄立特里亚',
+                Spain: '西班牙',
+                Estonia: '爱沙尼亚',
+                Ethiopia: '埃塞俄比亚',
+                Finland: '芬兰',
+                Fiji: '斐',
+                'Falkland Islands': '福克兰群岛',
+                France: '法国',
+                Gabon: '加蓬',
+                'United Kingdom': '英国',
+                Georgia: '格鲁吉亚',
+                Ghana: '加纳',
+                Guinea: '几内亚',
+                Gambia: '冈比亚',
+                'Guinea Bissau': '几内亚比绍',
+                Greece: '希腊',
+                Greenland: '格陵兰',
+                Guatemala: '危地马拉',
+                'French Guiana': '法属圭亚那',
+                Guyana: '圭亚那',
+                Honduras: '洪都拉斯',
+                Croatia: '克罗地亚',
+                Haiti: '海地',
+                Hungary: '匈牙利',
+                Indonesia: '印度尼西亚',
+                India: '印度',
+                Ireland: '爱尔兰',
+                Iran: '伊朗',
+                Iraq: '伊拉克',
+                Iceland: '冰岛',
+                Israel: '以色列',
+                Italy: '意大利',
+                Jamaica: '牙买加',
+                Jordan: '约旦',
+                Japan: '日本',
+                Kazakhstan: '哈萨克斯坦',
+                Kenya: '肯尼亚',
+                Kyrgyzstan: '吉尔吉斯斯坦',
+                Cambodia: '柬埔寨',
+                Kosovo: '科索沃',
+                Kuwait: '科威特',
+                Laos: '老挝',
+                Lebanon: '黎巴嫩',
+                Liberia: '利比里亚',
+                Libya: '利比亚',
+                'Sri Lanka': '斯里兰卡',
+                Lesotho: '莱索托',
+                Lithuania: '立陶宛',
+                Luxembourg: '卢森堡',
+                Latvia: '拉脱维亚',
+                Morocco: '摩洛哥',
+                Moldova: '摩尔多瓦',
+                Madagascar: '马达加斯加',
+                Mexico: '墨西哥',
+                Macedonia: '马其顿',
+                Mali: '马里',
+                Myanmar: '缅甸',
+                Montenegro: '黑山',
+                Mongolia: '蒙古',
+                Mozambique: '莫桑比克',
+                Mauritania: '毛里塔尼亚',
+                Malawi: '马拉维',
+                Malaysia: '马来西亚',
+                Namibia: '纳米比亚',
+                'New Caledonia': '新喀里多尼亚',
+                Niger: '尼日尔',
+                Nigeria: '尼日利亚',
+                Nicaragua: '尼加拉瓜',
+                Netherlands: '荷兰',
+                Norway: '挪威',
+                Nepal: '尼泊尔',
+                'New Zealand': '新西兰',
+                Oman: '阿曼',
+                Pakistan: '巴基斯坦',
+                Panama: '巴拿马',
+                Peru: '秘鲁',
+                Philippines: '菲律宾',
+                'Papua New Guinea': '巴布亚新几内亚',
+                Poland: '波兰',
+                'Puerto Rico': '波多黎各',
+                'North Korea': '北朝鲜',
+                Portugal: '葡萄牙',
+                Paraguay: '巴拉圭',
+                Qatar: '卡塔尔',
+                Romania: '罗马尼亚',
+                Russia: '俄罗斯',
+                Rwanda: '卢旺达',
+                'Western Sahara': '西撒哈拉',
+                'Saudi Arabia': '沙特阿拉伯',
+                Sudan: '苏丹',
+                'South Sudan': '南苏丹',
+                Senegal: '塞内加尔',
+                'Solomon Islands': '所罗门群岛',
+                'Sierra Leone': '塞拉利昂',
+                'El Salvador': '萨尔瓦多',
+                Somaliland: '索马里兰',
+                Somalia: '索马里',
+                'Republic of Serbia': '塞尔维亚',
+                Suriname: '苏里南',
+                Slovakia: '斯洛伐克',
+                Slovenia: '斯洛文尼亚',
+                Sweden: '瑞典',
+                Swaziland: '斯威士兰',
+                Syria: '叙利亚',
+                Chad: '乍得',
+                Togo: '多哥',
+                Thailand: '泰国',
+                Tajikistan: '塔吉克斯坦',
+                Turkmenistan: '土库曼斯坦',
+                'East Timor': '东帝汶',
+                'Trinidad and Tobago': '特里尼达和多巴哥',
+                Tunisia: '突尼斯',
+                Turkey: '土耳其',
+                'United Republic of Tanzania': '坦桑尼亚',
+                Uganda: '乌干达',
+                Ukraine: '乌克兰',
+                Uruguay: '乌拉圭',
+                'United States': '美国',
+                Uzbekistan: '乌兹别克斯坦',
+                Venezuela: '委内瑞拉',
+                Vietnam: '越南',
+                Vanuatu: '瓦努阿图',
+                'West Bank': '西岸',
+                Yemen: '也门',
+                'South Africa': '南非',
+                Zambia: '赞比亚',
+                Korea: '韩国',
+                Tanzania: '坦桑尼亚',
+                Zimbabwe: '津巴布韦',
+                Congo: '刚果',
+                'Central African Rep.': '中非',
+                Serbia: '塞尔维亚',
+                'Bosnia and Herz.': '波黑',
+                'Czech Rep.': '捷克',
+                'W. Sahara': '西撒哈拉',
+                'Lao PDR': '老挝',
+                'Dem.Rep.Korea': '朝鲜',
+                'Falkland Is.': '福克兰群岛',
+                'Timor-Leste': '东帝汶',
+                'Solomon Is.': '所罗门群岛',
+                Palestine: '巴勒斯坦',
+                'N. Cyprus': '北塞浦路斯',
+                Aland: '奥兰群岛',
+                'Fr. S. Antarctic Lands': '法属南半球和南极陆地',
+                Mauritius: '毛里求斯',
+                Comoros: '科摩罗',
+                'Eq. Guinea': '赤道几内亚',
+                'Guinea-Bissau': '几内亚比绍',
+                'Dominican Rep.': '多米尼加',
+                'Saint Lucia': '圣卢西亚',
+                Dominica: '多米尼克',
+                'Antigua and Barb.': '安提瓜和巴布达',
+                'U.S. Virgin Is.': '美国原始岛屿',
+                Montserrat: '蒙塞拉特',
+                Grenada: '格林纳达',
+                Barbados: '巴巴多斯',
+                Samoa: '萨摩亚',
+                Bahamas: '巴哈马',
+                'Cayman Is.': '开曼群岛',
+                'Faeroe Is.': '法罗群岛',
+                'IsIe of Man': '马恩岛',
+                Malta: '马耳他共和国',
+                Jersey: '泽西',
+                'Cape Verde': '佛得角共和国',
+                'Turks and Caicos Is.': '特克斯和凯科斯群岛',
+                'St. Vin. and Gren.': '圣文森特和格林纳丁斯'
+            };
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (params) {
+                        if (params.name) {
+                            return params.name;
+                        }
+                    }
+                },
+
+                series: [
+                    {
+                        name: 'World Population (2010)',
+                        type: 'map',
+                        mapType: 'world',
+                        roam: true,
+                        itemStyle: {
+                            areaColor: '#7B68EE', // 地图区域的颜色 如果设置了visualMap，areaColor属性将不起作用
+                            borderWidth: 0.5, // 描边线宽 为 0 时无描边
+                            // borderColor: '#000', // 图形的描边颜色 支持的颜色格式同 color，不支持回调函数
+                            borderType: 'solid', // 描边类型，默认为实线，支持 'solid', 'dashed', 'dotted'
+                            emphasis: {label: {show: true}}
+                        },
+                        label: {
+                            show: false // 是否显示对应地名
+                        },
+                        nameMap: nameMap
+                    }
+                ]
+            };
+            myChart.setOption(option);
+            // 监听地图点击事件
+            myChart.on('click', function(params) {
+                // // 获取点击的区域名称
+                alert("onclick");
+            });
+        }
+
+        // 展示自定义的界面
+        function showCustomInstall() {
+            document.getElementById('fullInstallContent').style.display = 'none';
+            document.getElementById('customInstallContent').style.display = 'block';
+        }
+
+        // 展示全盘安装界面
+        function showFullInstall() {
+            document.getElementById('fullInstallContent').style.display = 'block';
+            document.getElementById('customInstallContent').style.display = 'none';
+        }
+
+        // 显示新建分区的内容
+        function addPartition() {
+            document.getElementById("newPartitionForm").style.display = "block";
+        }
+
+        // 填写分区信息
+        function createPartition() {
+            var partitionType = document.querySelector('input[name="partitionType"]:checked').value;
+            var partitionLocation = document.querySelector('input[name="partitionLocation"]:checked').value;
+            var use = document.getElementById("use").value;
+            var mountPoint = document.getElementById("mountPoint").value;
+            var size = document.getElementById("size").value;
+
+            if(size == 0){
+                alert('分区大小不能为0。');
+            }
+            else{
+                var table = document.querySelector("#customInstallContent table");
+            var newRow = table.insertRow(table.rows.length-1); // 添加新行
+
+            // 设备信息
+            var deviceCell = newRow.insertCell();
+            deviceCell.textContent = "/dev/sda" + (table.rows.length - 3);
+
+            // 类型信息
+            var typeCell = newRow.insertCell();
+            typeCell.textContent = use;
+
+            // 挂载点信息
+            var mountPointCell = newRow.insertCell();
+            mountPointCell.textContent = mountPoint;
+
+            // 大小信息
+            var sizeCell = newRow.insertCell();
+            sizeCell.textContent = size + "MiB";
+
+            // 已用信息
+            var useCell = newRow.insertCell();
+            useCell.textContent = "0.0MiB";
+
+            // 系统信息
+            var systemCell = newRow.insertCell();
+            systemCell.textContent = "";
+
+            // 格式化信息
+            var formatCell = newRow.insertCell();
+            formatCell.textContent = "是";
+
+        // 删除按钮
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "删除";
+            deleteButton.style.color = "white"; // 设置字体颜色为白色
+            deleteButton.onclick = function() {
+                var confirmDelete = confirm("确定要删除这一行吗？");
+                if (confirmDelete) {
+                    table.deleteRow(this.parentNode.parentNode.rowIndex);
+                    // 从 sizeCell 中获取其文本内容，并将其转换为数字
+                    var sizeCellValue = parseFloat(sizeCell.textContent);
+
+                    // 全局变量控制 value 和 max
+                    partitionSizeMiB = partitionSizeMiB + sizeCellValue;
+
+                            
+                    // 设置
+                    document.getElementById("PartitionSize").value = partitionSizeMiB + " MiB";
+
+                    var sizeInput = document.getElementById("size");
+                    sizeInput.value = partitionSizeMiB;
+
+                }
+            };
+
+            // 修改按钮
+            var editButton = document.createElement("button");
+            editButton.textContent = "修改";
+            editButton.style.color = "white"; // 设置字体颜色为白色
+            editButton.onclick = function(){
+                editRow = this.parentNode.parentNode.rowIndex;
+                console.log(editRow);
+                showEditOptionsForm();
+            };
+
+            // 获取最后一个单元格
+            var lastCellIndex = newRow.cells.length;
+
+            // 创建新的单元格
+            var newCell = newRow.insertCell(lastCellIndex);
+
+            // 添加删除按钮到新的单元格
+            newCell.appendChild(deleteButton);
+
+            // 添加修改按钮到新的单元格
+            newCell.appendChild(editButton);
+
+            // 从 sizeCell 中获取其文本内容，并将其转换为数字
+            var sizeCellValue = parseFloat(sizeCell.textContent);
+
+            // 全局变量控制 value 
+            partitionSizeMiB = partitionSizeMiB - sizeCellValue;
+
+                    
+            // 设置
+            document.getElementById("PartitionSize").value = partitionSizeMiB + " MiB";
+
+            var sizeInput = document.getElementById("size");
+            sizeInput.value = partitionSizeMiB;
+
+            newPartitionNumber += 1;
+
+            // // 隐藏新建分区界面
+            hideNewPartitionForm();
+            }
+            
+
+        }
+
+        // 隐藏新建分区界面的函数
+        function hideNewPartitionForm() {
+            document.getElementById("newPartitionForm").style.display = "none";
+        }
+
+        // 调用函数将文本添加到<textarea>元素中
+        function addTextToTextarea() {
+            var jsonData = readAllRowData();
+            var rowData = jsonData.rowData;
+            console.log(typeof rowData);
+            console.log(rowData);
+
+            var output = '';
+
+            for (var i = 0; i < rowData.length-1; i++) {
+                output += '# ' + (i + 1) + ' 分区在设备上 /dev/sda 将被创建\n';
+                output += '# ' + (i + 1) + ' 分区在 /dev/sda 上将被挂载为 ' + rowData[i][2] + '\n';
+                output += '# ' + (i + 1) + ' 分区在 /dev/sda 上将被格式化为 ' + rowData[i][1] + '\n';
+            }
+
+
+
+            var licenseText = document.getElementById('confirmLicenseText');
+            licenseText.value = output;
+        }
+
+        // 显示修改选项界面
+        function showEditOptionsForm() {
+            document.getElementById("editOptionsForm").style.display = "block";
+        }
+
+        // 更新选项
+        function updateOptions() {
+            // 获取要更新的值
+            var editedUse = document.getElementById("editUse").value;
+            var editedMountPoint = document.getElementById("editMountPoint").value;
+
+            // 获取表格
+            var table = document.querySelector("#customInstallContent table");
+
+            // 获取指定的行
+            var row = table.rows[editRow];
+
+            // 更新指定行的特定单元格内容
+            // 这里假设要修改第二列和第三列的值
+            row.cells[1].textContent = editedUse;
+            row.cells[2].textContent = editedMountPoint;
+
+            // 隐藏修改选项界面
+            hideEditOptionsForm();
+        }
+
+        // 隐藏修改选项界面
+        function hideEditOptionsForm() {
+            document.getElementById("editOptionsForm").style.display = "none";
+        }
+
+        function showFolderInput() {
+            var radioGhost = document.querySelector('input[name="path"][value="Ghost"]');
+            var folderInputRow = document.getElementById('folderInputRow');
+            if (radioGhost.checked) {
+                folderInputRow.style.display = 'table-row';
+            } else {
+                folderInputRow.style.display = 'none';
+            }
+        }
+
+        function openFile() {
+            var fileInput = document.getElementById('fileInput');
+            fileInput.addEventListener('change', function() {
+                var folderInput = document.getElementById('folderInput');
+                folderInput.value = fileInput.value;
+            });
+            fileInput.click(); // 触发文件选择对话框
+        }
+
+        function readAllRowData() {
+            // 找到所有的 radio 按钮
+            var radioButtons = document.querySelectorAll('input[name="language"]');
+            var selectedLanguage = "";
+
+            // 遍历所有 radio 按钮
+            radioButtons.forEach(function(radioButton) {
+                // 检查哪个 radio 按钮被选中
+                if (radioButton.checked) {
+                    // 获取被选中的 radio 按钮的 value 属性值
+                    selectedLanguage = radioButton.value;
+                }
+            });
+
+            // 获取 select 元素
+            var selectElement = document.getElementById("timezoneSelect");
+
+            // 获取当前选择的索引
+            var selectedIndex = selectElement.selectedIndex;
+
+            // 获取选择的值
+            var selectedTimezone = selectElement.options[selectedIndex].textContent;
+
+            // 获取选择的值
+            var table = document.getElementById("customInstallContent");
+            var rows = table.getElementsByTagName("tr");
+            var rowData = [];
+
+            // 从第二行开始读取数据（跳过表头）
+            for (var i = 2; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var rowContent = [];
+                // 读取每一列的数据并存入数组
+                for (var j = 0; j < cells.length; j++) {
+                    var input = cells[j].querySelector("input[type='text']"); // 获取包含在<td>中的<input>元素
+                    if (input) {
+                        rowContent.push(input.value); // 读取<input>元素的值并存入数组
+                    } else {
+                        rowContent.push(cells[j].innerText); // 如果<td>中没有<input>元素，则读取<td>的文本内容并存入数组
+                    }
+                }
+                rowData.push(rowContent);
+            }
+
+
+            // 将结果打包成 JSON 数据格式
+            var jsonData = {
+                "selectedLanguage": selectedLanguage,
+                "selectedTimezone": selectedTimezone,
+                "selectedPath":"Live",
+                "rowData": rowData
+            };
+
+            return jsonData;
+        }
+
+        function readAllJsonData() {
+            // 找到所有的 radio 按钮
+            var radioButtons = document.querySelectorAll('input[name="language"]');
+            var selectedLanguage = "";
+
+            // 遍历所有 radio 按钮
+            radioButtons.forEach(function(radioButton) {
+                // 检查哪个 radio 按钮被选中
+                if (radioButton.checked) {
+                    // 获取被选中的 radio 按钮的 value 属性值
+                    selectedLanguage = radioButton.value;
+                }
+            });
+
+            // 获取 select 元素
+            var selectElement = document.getElementById("timezoneSelect");
+
+            // 获取当前选择的索引
+            var selectedIndex = selectElement.selectedIndex;
+
+            // 获取选择的值
+            var selectedTimezone = selectElement.options[selectedIndex].textContent;
+
+            // 获取选择的值
+            var table = document.getElementById("customInstallContent");
+            var rows = table.getElementsByTagName("tr");
+            var rowData = [];
+
+            // 从第二行开始读取数据（跳过表头）
+            for (var i = 2; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var rowContent = {};
+                // 读取每一列的数据并存入对象
+                for (var j = 0; j < cells.length; j++) {
+                    var input = cells[j].querySelector("input[type='text']"); // 获取包含在<td>中的<input>元素
+                    var cellData;
+                    if (input) {
+                        cellData = input.value; // 读取<input>元素的值
+                    } else {
+                        cellData = cells[j].innerText; // 如果<td>中没有<input>元素，则读取<td>的文本内容
+                    }
+                    // 将数据存入对象的属性中
+                    rowContent["column" + j] = cellData;
+                }
+                rowData.push(rowContent);
+            }
+
+            // 将结果打包成 JSON 数据格式
+            var jsonData = {
+                "selectedLanguage": selectedLanguage,
+                "selectedTimezone": selectedTimezone,
+                "selectedPath":"Live",
+                "rowData": rowData
+            };
+
+            return JSON.stringify(jsonData); // 将JSON对象转换为字符串并返回
+        }
+
+    </script>
+</body>
+</html>
